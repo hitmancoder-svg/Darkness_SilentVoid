@@ -79,7 +79,6 @@
       user-select: none;
       box-shadow: inset 0 0 8px rgba(255,255,255,0.2), 0 0 8px rgba(0,0,0,0.6);
     }
-    }
 
     .option:hover { background: gold; color: #000; }
     .selected {
@@ -121,13 +120,11 @@
 </head>
 <body>
 
-  <!-- INTRO 1 -->
   <div class="screen intro" id="intro1">
     <h1>SUSTAINABLE PRACTICES IN ANCIENT TIMES</h1>
     <button id="start1">NEXT</button>
   </div>
 
-  <!-- GAME -->
   <div class="screen" id="game">
     <div class="topbar">
       <div id="timer">Time: 15</div>
@@ -150,13 +147,11 @@
     </div>
   </div>
 
-  <!-- INTRO 2 -->
   <div class="screen intro" id="intro2">
     <h1>YOGA , PRANAYAM AND MEDITATION FOR HEALTH AND WELL BEING</h1>
     <button id="start2">START</button>
   </div>
 
-  <!-- END -->
   <div class="screen intro" id="end">
     <h1>THANK YOU</h1>
     <p style="font-size:22px">Quiz Completed.</p>
@@ -164,6 +159,8 @@
 
 <script>
   const round1 = [
+    { q: "Ancient Indian farmers mainly used which type of farming?", o: ["Chemical farming", "Organic farming", "Factory farming", "Machine farming"], a: 1 },
+    { q: "Which natural item was commonly used as fertilizer in ancient Indian agriculture?", o: ["Plastic waste", "Cow dung", "Chemical powder", "Petrol"], a: 1 },
     { q: "What was the main belief about nature in ancient India?", o: ["Nature is for profit", "Nature is a machine", "Nature is a living entity", "Nature is unlimited"], a: 2 },
     { q: "Which farming method keeps soil fertile by changing crops?", o: ["Irrigation", "Crop rotation", "Harvesting", "Storage"], a: 1 },
     { q: "What system was used to collect rainwater in ancient times?", o: ["Dams", "Pipelines", "Rainwater harvesting", "Wells only"], a: 2 },
@@ -199,14 +196,12 @@
   const options = document.querySelectorAll('.option');
 
   document.getElementById('start1').onclick = () => {
-    // timer starts after clicking START
     intro1.style.display = 'none';
     game.style.display = 'block';
     load();
   };
 
   document.getElementById('start2').onclick = () => {
-    // timer starts after clicking START
     intro2.style.display = 'none';
     game.style.display = 'block';
     load();
@@ -282,7 +277,7 @@
       }
 
       scoreBox.innerText = 'Score: ' + score;
-    }, 1000); // 1 second delay
+    }, 1000);
   }
 
   document.getElementById('nextBtn').onclick = () => {
